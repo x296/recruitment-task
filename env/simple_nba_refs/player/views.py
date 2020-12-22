@@ -16,20 +16,8 @@ def index(request):
 	# 	'weight_pounds': r['weight_pounds'],
 	# }
 
-	# url = 'https://www.balldontlie.io/api/v1/players?per_page=100?page={}'
-	# page_nr = 5
 
-	# r = requests.get(url.format(page_nr)).json()
 
-	# player_list = []
-	# lal = []
-
-	# # for page in range(r['meta']['total_pages']):
-	# # 	r = requests.get(url.format(page)).json()
-	# for player in r['data']:
-	# 	print(player['team']['id'])
-	# 	if player['team']['id'] == 9:
-	# 		lal.append(player)
 
 
 	url = 'https://www.balldontlie.io/api/v1/teams'
@@ -43,12 +31,46 @@ def index(request):
 		team_specs = {
 			'id': team['id'],
 			'full_name': team['full_name'],
+			'roster': [],
 		}
 		
 		team_list.append(team_specs)
 
 
-	print(team_list)
+
+
+	url = 'https://www.balldontlie.io/api/v1/players'
+
+	r = requests.get(url).json()
+
+
+	for page in range(r['meta']['total_pages']):
+		r = requests.get(url.format(page)).json()
+		for player in r['data']:
+			for team in team_list:
+				if player['team']['id'] == team['id']:
+					team['roster'].append(player['last_name'])
+				
+
+	print(team_list[0])
+
+	# url = 'https://www.balldontlie.io/api/v1/teams'
+
+	# r = requests.get(url).json()
+
+	# team_list = []
+
+	# for team in r['data']:
+
+	# 	team_specs = {
+	# 		'id': team['id'],
+	# 		'full_name': team['full_name'],
+	# 	}
+		
+	# 	team_list.append(team_specs)
+
+
+	# print(team_list)
 
 	player_stats = {}
 
