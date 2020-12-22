@@ -39,20 +39,28 @@ def index(request):
 
 
 
-	url = 'https://www.balldontlie.io/api/v1/players'
+	url = 'https://www.balldontlie.io/api/v1/stats?seasons[]=2019&postseason=true'
 
 	r = requests.get(url).json()
 
+	print(r)
 
-	for page in range(r['meta']['total_pages']):
-		r = requests.get(url.format(page)).json()
-		for player in r['data']:
-			for team in team_list:
-				if player['team']['id'] == team['id']:
-					team['roster'].append(player['last_name'])
+
+
+
+
+
+
+
+	# for page in range(r['meta']['total_pages'] - 25):
+	# 	r = requests.get(url.format(page)).json()
+	# 	for player in r['data']:
+	# 		for team in team_list:
+	# 			if player['team']['id'] == team['id']:
+	# 				team['roster'].append(player['id'])
 				
 
-	print(team_list[0])
+	# print(team_list[0])
 
 	# url = 'https://www.balldontlie.io/api/v1/teams'
 
