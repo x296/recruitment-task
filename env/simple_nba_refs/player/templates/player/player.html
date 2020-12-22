@@ -1,0 +1,34 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>NBA - {{ player_stats.last_name }}, {{ player_stats.first_name }}</title>
+</head>
+<body>
+	<div>
+		<div class="BasicStats">
+			<h1>{{ player_stats.position }} | {{ player_stats.first_name }} {{ player_stats.last_name }}</h1>
+		</div>
+		<div class="AdvancedStats">
+			Height: {{ player_stats.height_feet }}'{{ player_stats.height_inches }}"
+			Position: {{ player_stats.position }}
+			Weight: {{ player_stats.weight_pounds }}
+		</div>
+	</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA</title>
+</head>
+<body>
+	{% for team in team_list %}
+	<div>
+		<div class="BasicStats">
+			<h1>{{ team.full_name }}</h1>
+		</div>
+	</div>
+	{% endfor %}
+</body>
+</html>
