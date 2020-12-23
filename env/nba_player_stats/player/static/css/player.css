@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.player {
+	width: 400px;
+	height: 250px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 10px;
+	padding: 30px 38px;
+	border: solid 1px;
+	border-radius: 20px;
+	background: #222222;
+	color: #FFFFFF;
+}
+
+.name {
+	display: flex;
+	flex-basis: 200px;
+	vertical-align: center;
+}
+
+.name h1 {
+	padding: 0px  15px 0px 0px;
+	border-right: white solid 1px;
+	font-size: 60pt;
+}
+
+.name h2 {
+	padding: 0px  0px 0px 15px;
+	font-size: 24pt;
+}
+
+.name h1, h2 {
+	align-self: center;
+}
+
+.bmi {
+	display: flex;
+	flex-basis: 100px;
+	flex-direction: column;
+	padding-left: 40px;
+	align-self: center;
+	font-size: 13pt;
+}
+
+.team {
+	display: flex;
+	flex-basis: 400px;
+	flex-direction: column;
+}
