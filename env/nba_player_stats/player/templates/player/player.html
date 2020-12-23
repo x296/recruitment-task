@@ -10,27 +10,29 @@
 
 </head>
 <body>
-	<main>
+	<main class="players_grid">
+		{% for player in players_list %}
 		<div class="player">
 			<div class="person">
 				<div class="about">
-					<span id='position'>{{ player_stats.position }}</span>
+					<span id='position'>{{ player.position }}</span>
 					<div class="name">
-						<span id="first_name">{{ player_stats.first_name }}</span>
-						<span id="last_name">{{ player_stats.last_name }}</span>
+						<span id="first_name">{{ player.first_name }}</span>
+						<span id="last_name">{{ player.last_name }}</span>
 					</div>
 				</div>
 				<div class="bmi">
-					<span>{{ player_stats.height_feet }}'{{ player_stats.height_inches }}"</span>
-					<span>{{ player_stats.weight_pounds }} lbs</span>
+					<span>{{ player.height_feet }}'{{ player.height_inches }}"</span>
+					<span>{{ player.weight_pounds }} lbs</span>
 				</div>
 			</div>
 			<div class="team">
-				<span id="team_name">{{ player_stats.team_name }}</span>
-				<span id="team_division"><span>Division: </span>{{ player_stats.division }}</span>
-				<span id="team_conference"><span>Conference: </span>{{ player_stats.conference }}</span>
+				<span id="team_name">{{ player.team_name }}</span>
+				<span id="team_division"><span>Division: </span>{{ player.division }}</span>
+				<span id="team_conference"><span>Conference: </span>{{ player.conference }}</span>
 			</div>
 		</div>
+		{% endfor %}
 	</main>
 </body>
 </html>
