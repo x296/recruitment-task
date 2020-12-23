@@ -3,7 +3,7 @@
 <html>
 <head>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'css/player.css' %}">
 	
 	<title>NBA</title>
@@ -12,18 +12,23 @@
 <body>
 	<main>
 		<div class="player">
-			<div class="name">
-				<h1 id='position'>{{ player_stats.position }}</h1>
-				<h2>{{ player_stats.first_name }} {{ player_stats.last_name }}</h2>
-			</div>
-			<div class="bmi">
-				<span>{{ player_stats.height_feet }}'{{ player_stats.height_inches }}"</span>
-				<span>{{ player_stats.weight_pounds }} lbs</span>
+			<div class="person">
+				<div class="about">
+					<span id='position'>{{ player_stats.position }}</span>
+					<div class="name">
+						<span id="first_name">{{ player_stats.first_name }}</span>
+						<span id="last_name">{{ player_stats.last_name }}</span>
+					</div>
+				</div>
+				<div class="bmi">
+					<span>{{ player_stats.height_feet }}'{{ player_stats.height_inches }}"</span>
+					<span>{{ player_stats.weight_pounds }} lbs</span>
+				</div>
 			</div>
 			<div class="team">
-				<p>{{ player_stats.team_name }}</p>
-				<p>{{ player_stats.conference }}</p>
-				<p>{{ player_stats.division }}</p>
+				<span id="team_name">{{ player_stats.team_name }}</span>
+				<span id="team_division"><span>Division: </span>{{ player_stats.division }}</span>
+				<span id="team_conference"><span>Conference: </span>{{ player_stats.conference }}</span>
 			</div>
 		</div>
 	</main>
