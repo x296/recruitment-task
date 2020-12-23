@@ -42,8 +42,14 @@ body {
 	background: radial-gradient(circle, rgba(94,51,0,0.85) 0%, rgba(34,34,34,0.85) 100%);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	color: #FFFFFF;
+	color: #DDDDDD;
+	/*animation: roaming 10s infinite forwards linear;*/
+	transition: transform 1s;
 
+}
+
+.player:hover {
+	transform: scale(1.1);
 }
 
 .person {
@@ -129,20 +135,20 @@ body {
 	font-weight: 100;
 }
 
-
-
-
-/*.name h1 {
-	padding: 0px  15px 0px 0px;
-	border-right: white solid 1px;
-	font-size: 50pt;
-}
-
-.name h2 {
-	padding: 0px  0px 0px 15px;
-	font-size: 20pt;
-}
-
-.name h1, h2 {
-	align-self: center;
+/*@keyframes roaming {
+	0% {
+		transform: matrix3d(1,0,0.00,0.0001,0.00,1,0.00,0.0001,0,0,1,0,0,0,0,1);
+	}
+	25% {
+		transform: matrix3d(1,0,0.00,0.0001,0.00,1,0.00,-0.0001,0,0,1,0,0,0,0,1);
+	}
+	50% {
+		transform: matrix3d(1,0,0.00,-0.0001,0.00,1,0.00,-0.0001,0,0,1,0,0,0,0,1);
+	}
+	75% {
+		transform: matrix3d(1,0,0.00,-0.0001,0.00,1,0.00,0.0001,0,0,1,0,0,0,0,1);
+	}
+	100% {
+		transform: matrix3d(1,0,0.00,0.0001,0.00,1,0.00,0.0001,0,0,1,0,0,0,0,1);
+	}
 }*/
