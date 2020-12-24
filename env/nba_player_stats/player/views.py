@@ -5,10 +5,10 @@ from .models import Stats
 
 def index(request):
 
+	# list for players from database
 	# players_list = Stats.objects.all()
 
-	# default_ids = [15, 274, 237, 192, 246, 145, 132, 278, 79]
-
+	# list for players creating from request ->
 	players_list = []
 
 	url = 'https://www.balldontlie.io/api/v1/players/{}'
@@ -37,6 +37,7 @@ def index(request):
 
 		players_list.append(player_stats)
 		r = None
+		# <-
 
 	context = {'players_list': players_list}
 
