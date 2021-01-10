@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/player.css' %}">
+	
+	<title>NBA</title>
+
+</head>
+<body>
+	{% include 'navbar.html' %}
+
+	{% block roster %}
+		replace me
+	{% endblock %}
+</body>
+</html>
