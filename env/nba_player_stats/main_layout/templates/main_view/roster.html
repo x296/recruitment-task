@@ -2,8 +2,8 @@
 
 {% block roster %}
 	<main class="players_grid">
-		{% block player %}
-			player
-		{% endblock %}
+		{% for player in players_list %}
+			{% include 'main_view/player.html' %}
+		{% endfor %}
 	</main>
 {% endblock %}

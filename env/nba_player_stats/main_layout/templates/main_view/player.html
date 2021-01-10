@@ -1,0 +1,20 @@
+<div class="player">
+	<div class="person">
+		<div class="about">
+			<span id='position'>{{ player.position }}</span>
+			<div class="name">
+				<span id="first_name">{{ player.first_name }}</span>
+				<span id="last_name">{{ player.last_name }}</span>
+			</div>
+		</div>
+		<div class="bmi">
+			<span>{{ player.height_feet }}'{{ player.height_inches }}"</span>
+			<span>{{ player.weight_pounds }} lbs</span>
+		</div>
+	</div>
+	<div class="team">
+		<span id="team_name">{{ player.team_name }}</span>
+		<span id="team_division"><span>Division: </span>{{ player.division }}</span>
+		<span id="team_conference"><span>Conference: </span>{{ player.conference }}</span>
+	</div>
+</div>
